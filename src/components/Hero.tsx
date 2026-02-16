@@ -47,8 +47,11 @@ const Hero = () => {
             Turn AI intent into{" "}
             <span className="text-gradient">forward motion</span>
           </h1>
+          <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-2xl leading-relaxed">
+            <span className="text-accent font-semibold">Kudo</span> is a Japanese word (駆動) — it means <em>driving force</em>. The power that turns intent into forward motion.
+          </p>
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl leading-relaxed">
-            Kudo Advisory helps leadership teams move from AI ambition to
+            We exist to make AI move. Kudo Advisory helps leadership teams go from AI ambition to
             governed, measurable progress — without the buzzwords.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">

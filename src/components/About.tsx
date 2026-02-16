@@ -22,6 +22,12 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Practical AI advisory for enterprise leaders
             </h2>
+            <div className="mb-6 p-5 rounded-xl bg-accent/10 border border-accent/20">
+              <p className="text-accent font-serif text-2xl mb-1">駆動</p>
+              <p className="text-foreground font-medium">
+                <span className="text-accent">Kudo</span> — Japanese for <em>driving force</em>. The power that turns intent into forward motion.
+              </p>
+            </div>
             <p className="text-muted-foreground leading-relaxed mb-4">
               Kudo Advisory was founded to bridge the gap between AI ambition and
               enterprise reality. We work with CIOs, CDOs, and transformation
@@ -29,8 +35,8 @@ const About = () => {
               actually get delivered.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              No buzzwords. No vendor lock-in. Just clear-headed advice that
-              moves the needle.
+              We exist to make AI move. No buzzwords. No vendor lock-in. Just
+              clear-headed advice that moves the needle.
             </p>
           </div>
           <div className="relative">
