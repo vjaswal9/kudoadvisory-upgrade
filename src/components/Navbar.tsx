@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-horizontal.png";
 
 const navLinks = [
   { label: "Outcomes", href: "#outcomes" },
@@ -26,8 +27,8 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-serif text-2xl font-bold text-primary">
-          Kudo Advisory
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="Kudo Advisory" className="h-8" />
         </a>
 
         {/* Desktop */}
