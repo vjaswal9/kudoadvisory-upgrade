@@ -29,16 +29,16 @@ const Contact = () => {
 
             <div className="space-y-4">
               <a
-                href="mailto:hello@kudoadvisory.com"
+                href="mailto:vijay@kudoadvisory.com"
                 className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
               >
                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
                   <Mail className="text-accent" size={18} />
                 </div>
-                hello@kudoadvisory.com
+                vijay@kudoadvisory.com
               </a>
               <a
-                href="https://www.linkedin.com/company/kudo-advisory"
+                href="https://www.linkedin.com/in/vijayjaswal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
