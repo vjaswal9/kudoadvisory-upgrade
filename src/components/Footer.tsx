@@ -1,6 +1,9 @@
+import logo from "@/assets/logo-horizontal.png";
+
 const Footer = () => (
   <footer className="border-t border-border py-8 px-6">
     <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <img src={logo} alt="Kudo Advisory" className="h-6" />
       <p className="text-sm text-muted-foreground">
         © {new Date().getFullYear()} Kudo Advisory. All rights reserved.
       </p>
