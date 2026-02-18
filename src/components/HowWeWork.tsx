@@ -1,5 +1,6 @@
 import { Search, Shield, Rocket } from "lucide-react";
 import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
+import howWeWorkBg from "@/assets/how-we-work-bg.jpg";
 
 const steps = [
   {
@@ -26,8 +27,19 @@ const HowWeWork = () => {
   const ref = useScrollFadeIn();
 
   return (
-    <section id="how-we-work" className="py-24 px-6">
-      <div ref={ref} className="section-fade-in max-w-7xl mx-auto">
+    <section id="how-we-work" className="relative py-24 px-6 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={howWeWorkBg}
+          alt=""
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
+
+      <div ref={ref} className="section-fade-in max-w-7xl mx-auto relative z-10">
         <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3 text-center">
           Our Approach
         </p>
@@ -41,7 +53,7 @@ const HowWeWork = () => {
           {steps.map((step, i) => (
             <div key={step.num} className="flex-1 relative text-center px-6">
               {/* Step circle */}
-              <div className="relative mx-auto w-32 h-32 rounded-full bg-card border-2 border-accent/30 flex flex-col items-center justify-center mb-8 hover:border-accent transition-colors">
+              <div className="relative mx-auto w-32 h-32 rounded-full bg-card/80 backdrop-blur-sm border-2 border-accent/30 flex flex-col items-center justify-center mb-8 hover:border-accent transition-colors">
                 <span className="text-accent text-xs font-bold tracking-widest mb-1">
                   {step.num}
                 </span>

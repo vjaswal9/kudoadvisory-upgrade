@@ -7,6 +7,7 @@ import {
   Workflow,
 } from "lucide-react";
 import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
+import servicesBg from "@/assets/services-bg.jpg";
 
 const services = [
   {
@@ -45,8 +46,19 @@ const Services = () => {
   const ref = useScrollFadeIn();
 
   return (
-    <section id="services" className="py-24 px-6 bg-secondary/30">
-      <div ref={ref} className="section-fade-in max-w-7xl mx-auto">
+    <section id="services" className="relative py-24 px-6 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={servicesBg}
+          alt=""
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-background/85" />
+      </div>
+
+      <div ref={ref} className="section-fade-in max-w-7xl mx-auto relative z-10">
         <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3 text-center">
           What We Do
         </p>
@@ -57,7 +69,7 @@ const Services = () => {
           {services.map((s) => (
             <div
               key={s.title}
-              className="group p-8 rounded-2xl bg-card border border-border hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-accent/5"
+              className="group p-8 rounded-2xl bg-card/80 backdrop-blur-sm border border-border hover:border-accent/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-accent/5"
             >
               <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/20 transition-colors">
                 <s.icon className="text-accent" size={24} />
