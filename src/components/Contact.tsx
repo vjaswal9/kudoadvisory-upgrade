@@ -1,5 +1,6 @@
 import { Mail, Linkedin, ArrowRight } from "lucide-react";
 import { useScrollFadeIn } from "@/hooks/useScrollFadeIn";
+import contactBg from "@/assets/contact-bg.jpg";
 import { useState } from "react";
 
 const Contact = () => {
@@ -12,8 +13,19 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-6">
-      <div ref={ref} className="section-fade-in max-w-7xl mx-auto">
+    <section id="contact" className="relative py-24 px-6 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img
+          src={contactBg}
+          alt=""
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-background/88" />
+      </div>
+
+      <div ref={ref} className="section-fade-in max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3">
