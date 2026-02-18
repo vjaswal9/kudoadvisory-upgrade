@@ -13,20 +13,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-6 overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img
-          src={contactBg}
-          alt=""
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 bg-background/95" />
-      </div>
-
-      <div ref={ref} className="section-fade-in max-w-7xl mx-auto relative z-10">
+    <section id="contact" className="py-24 px-6 bg-background">
+      <div ref={ref} className="section-fade-in max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          {/* Left column: text + featured image */}
           <div>
             <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3">
               Get in Touch
@@ -34,6 +24,17 @@ const Contact = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Let's talk about your AI ambitions
             </h2>
+
+            {/* Featured image */}
+            <div className="rounded-2xl overflow-hidden mb-8">
+              <img
+                src={contactBg}
+                alt="AI advisory consultation"
+                className="w-full h-48 md:h-64 object-cover"
+                loading="lazy"
+              />
+            </div>
+
             <p className="text-muted-foreground leading-relaxed mb-8">
               Whether you're just starting your AI journey or need help
               governing what you've already built, we'd love to hear from you.
@@ -63,6 +64,7 @@ const Contact = () => {
             </div>
           </div>
 
+          {/* Right column: form */}
           <div className="bg-card border border-border rounded-2xl p-8">
             {submitted ? (
               <div className="flex flex-col items-center justify-center h-full text-center py-12">
