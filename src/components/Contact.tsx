@@ -22,7 +22,7 @@ const Contact = () => {
           className="w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-background/88" />
+        <div className="absolute inset-0 bg-background/95" />
       </div>
 
       <div ref={ref} className="section-fade-in max-w-7xl mx-auto relative z-10">
